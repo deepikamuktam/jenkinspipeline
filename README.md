@@ -18,11 +18,6 @@ Jenkins Dashboard —> New item —> give project a name → project type (Pipel
 
 pipeline {
     agent any
-
-    triggers {
-        pollSCM('* * * * *') // Poll SCM every minute for changes
-    }
-
     tools {
         maven 'Maven 3.8.8' // Must match the Maven name configured in Jenkins
         jdk 'Java 17'       // Must match the JDK name configured in Jenkins
